@@ -1,6 +1,6 @@
 import '@babel/polyfill';
 import './index.html';
-import './styles/index.css';
+import './styles/index.scss';
 
 window.onload = function () {
 };

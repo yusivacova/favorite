@@ -1,0 +1,33 @@
+html {
+  @extend %font-main;
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "start-screen"
+    "content"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  font-size: 1.6rem;
+}
+
+.container {
+  overflow: hidden;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav-link {
+  color: $color-black;
+  @include font($size: 2rem);
+  @extend %transition;
+
+  &:hover {
+    color: $color-red;
+  }
+}

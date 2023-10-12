@@ -1,0 +1,23 @@
+.nav {
+   @include flex($justify: flex-end);
+  &__list {
+    flex: 0 1 700px;
+    @include flex($justify: space-evenly);
+  }
+  &__item {
+    @extend %transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__link {
+  }
+}
+
+.burger {
+  &__line {
+  }
+}
+
+.cover {
+}

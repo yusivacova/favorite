@@ -1,0 +1,18 @@
+.about {
+  padding: 30px 0;
+  &__body{
+    @include flex;
+  }
+  &__icon {
+    flex: 0 1 600px;
+    min-height: 400px;
+    background: url('../assets/images/icons/icons-main.png') 100% / cover no-repeat;
+    border-radius: 6%;
+  }
+  &__text {
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+}
