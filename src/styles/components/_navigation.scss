@@ -1,8 +1,7 @@
 .nav {
-   @include flex($justify: flex-end);
+  flex: 0 1 700px;
   &__list {
-    flex: 0 1 700px;
-    @include flex($justify: space-evenly);
+    @include flex;
   }
   &__item {
     @extend %transition;
@@ -15,9 +14,11 @@
 }
 
 .burger {
+   display: none;
   &__line {
   }
 }
 
 .cover {
+   display: none;
 }

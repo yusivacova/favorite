@@ -1,18 +1,44 @@
 .about {
-  padding: 30px 0;
-  &__body{
+  &__body {
     @include flex;
+    gap: 40px;
+    padding: 30px 0;
   }
+
   &__icon {
     flex: 0 1 600px;
     min-height: 400px;
-    background: url('../assets/images/icons/icons-main.png') 100% / cover no-repeat;
     border-radius: 6%;
+    background: url("../assets/images/icons/icons-main.png") 100% / cover no-repeat;
+    @extend %transition;
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 3px 3px 7px 3px $color-black;
+    }
   }
-  &__text {
+
+  &__content {
+    flex: 0 1 700px;
+    text-align: center;
   }
+
   &__title {
+    @extend %font-additional;
+    @include font($size: 6rem);
+    margin: 0 0 25px;
   }
+
   &__subtitle {
+    @include font($size: 3rem);
+    text-transform: uppercase;
   }
+
+  &__subtitle-addition {
+    @include font($size: 2.5rem);
+  }
+}
+
+.about .container {
+  padding: 0 30px;
 }
