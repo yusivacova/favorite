@@ -4,16 +4,7 @@
 
   &__body {
     @include flex;
-    gap: 20px;
-  }
-
-  &__logo {
-  }
-
-  &__nav {
-  }
-
-  &__burger {
+    gap: 60px;
   }
 }
 
