@@ -1,0 +1,77 @@
+.footer {
+  padding: 30px 0;
+  background-color: $color-main;
+
+  &__body {
+    @include flex($direction: column);
+    gap: 30px;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+  }
+
+  &__text {
+    @include flex($justify: center);
+    @include font($size: 3.5rem, $weight: bold);
+    gap: 30px;
+  }
+
+  &__number {
+    text-align: center;
+    color: $color-red;
+    @extend %transition;
+
+    &:hover {
+      transform: scale(1.06);
+      color: $color-green;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__content {
+    align-self: stretch;
+    @include flex($justify: center);
+  }
+
+  &__info {
+  }
+  &__info-item {
+  }
+
+  &__links-icon {
+    @include flex($justify: center);
+    gap: 15px;
+  }
+
+  &__item {
+    @extend %transition;
+    &:hover {
+      transform: scale(1.2);
+
+      .icon-svg {
+        color: $color-green;
+        fill: $color-green;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.icon-svg {
+  fill: $color-black;
+  @extend %transition;
+}

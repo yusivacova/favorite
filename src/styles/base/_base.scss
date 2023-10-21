@@ -20,6 +20,7 @@ body {
   max-width: $content-width;
   margin: 0 auto;
   padding: 0 15px;
+  @include font($size: 2.8rem);
 }
 
 .nav-link {
@@ -31,3 +32,18 @@ body {
     color: $color-red;
   }
 }
+
+h1 {
+  @extend %font-additional;
+  @include font($size: 5rem);
+}
+
+h2 {
+  text-transform: uppercase;
+  @include font($size: 3.5rem, $weight: 600);
+}
+
+h3 {
+  @include font($size: 3rem, $weight: 600);
+}
+

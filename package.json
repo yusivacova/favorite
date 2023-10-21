@@ -9,7 +9,8 @@
 		"build": "node_modules/.bin/webpack --progress",
 		"dev": "webpack serve --env development",
 		"lint": "./node_modules/.bin/eslint -c .eslintrc.json --ext .js src",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist",
+        "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix"
 	},
 	"keywords": [],
 	"author": "",

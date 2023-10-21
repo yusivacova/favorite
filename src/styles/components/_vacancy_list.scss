@@ -1,0 +1,26 @@
+.vacancy-list {
+  @include flex($direction: column, $align: flex-start, $justify: flex-start);
+  gap: 5px;
+
+  &__item {
+    position: relative;
+    padding: 0 0 0 30px;
+
+    span {
+      @include font($size: 3.5rem);
+      font-weight: 600;
+      color: $color-red;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15%;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: url("../assets/images/icons/star.png") 100% / cover no-repeat;
+    }
+  }
+}
