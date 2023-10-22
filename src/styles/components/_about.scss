@@ -3,6 +3,18 @@
     @include flex;
     gap: 40px;
     padding: 30px 0;
+
+    @include media-desktop-small {
+      gap: 5px;
+    }
+
+    @include media-tablet {
+      @include flex($wrap: wrap, $justify: center);
+    }
+
+    @include media-mobile {
+      padding: 15px 0;
+    }
   }
 
   &__icon {
@@ -16,11 +28,33 @@
       box-shadow: 3px 3px 7px 3px $color-black;
       transform: scale(1.06);
     }
+
+    @include media-desktop-small {
+      flex: 0 1 500px;
+      min-height: 235px;
+    }
+
+    @include media-tablet {
+      min-height: 320px;
+    }
+
+    @include media-mobile {
+      flex: 0 1 385px;
+      min-height: 255px;
+    }
+
+    @include media-mobile-small {
+      flex: 0 1 200px;
+      min-height: 155px;
+    }
   }
 
   &__content {
     flex: 0 1 700px;
     text-align: center;
+    @include media-tablet {
+      order: -1;
+    }
   }
 
   &__title {

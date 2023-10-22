@@ -1,6 +1,18 @@
 html {
   @extend %font-main;
   font-size: 10px;
+
+  @include media-desktop-small {
+    font-size: 8px;
+  }
+
+  @include media-mobile {
+    font-size: 6px;
+  }
+
+  @include media-mobile-small {
+    font-size: 5px;
+  }
 }
 
 body {
@@ -46,4 +58,3 @@ h2 {
 h3 {
   @include font($size: 3rem, $weight: 600);
 }
-
