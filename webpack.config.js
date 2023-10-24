@@ -29,7 +29,7 @@ module.exports = ({ development }) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/images/[name].[ext]'
+    assetModuleFilename: 'assets/images/[name][ext]'
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -54,7 +54,6 @@ module.exports = ({ development }) => ({
       fix: false,
     }),
     new HtmlValidatePlugin(),
-    new ImageminWebpWebpackPlugin(),
   ],
   module: {
     rules: [

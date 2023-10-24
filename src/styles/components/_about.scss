@@ -57,8 +57,14 @@
     }
   }
 
+  &__main-title {
+    margin: 5px 0;
+  }
+
   &__title {
     margin: 0 0 25px;
+    @extend %font-additional;
+    @include font($size: 5rem);
 
     span {
       color: $color-dark-blue;
