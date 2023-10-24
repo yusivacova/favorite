@@ -21,7 +21,7 @@
     flex: 0 1 800px;
     min-height: 400px;
     border-radius: 6%;
-    background: url("../assets/images/top-image.jpg") 100% / cover no-repeat;
+    background: url("../assets/images/top-image.webp") 100% / cover no-repeat;
     @extend %transition;
 
     &:hover {

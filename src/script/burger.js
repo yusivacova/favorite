@@ -4,7 +4,7 @@ export function createBurgerMenu() {
   pastMenu();
 
   closeBurgerMenu();
-};
+}
 
 const openMenuBurger = () => {
   document.querySelector('.burger').addEventListener('click', (e) => {

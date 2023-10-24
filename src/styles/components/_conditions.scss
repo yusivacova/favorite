@@ -67,6 +67,11 @@
       width: 25px;
       height: 25px;
       background: url("../assets/images/icons/arrow.svg") 100% / cover no-repeat;
+
+      @include media-desktop-small {
+        width: 20px;
+        height: 15px;
+      }
     }
   }
 }

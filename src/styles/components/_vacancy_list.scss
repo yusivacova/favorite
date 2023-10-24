@@ -6,6 +6,10 @@
     position: relative;
     padding: 0 0 0 30px;
 
+    @include media-mobile {
+      padding: 0 0 0 20px;
+    }
+
     span {
       @include font($size: 3.5rem);
       font-weight: 600;
@@ -16,11 +20,21 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 15%;
+      top: 35%;
       display: inline-block;
       width: 25px;
       height: 25px;
       background: url("../assets/images/icons/star.png") 100% / cover no-repeat;
+
+      @include media-desktop-small {
+        width: 20px;
+        height: 15px;
+      }
+
+      @include media-mobile {
+        width: 15px;
+        height: 10px;
+      }
     }
   }
 }
