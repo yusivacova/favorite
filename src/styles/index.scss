@@ -1,0 +1,23 @@
+//abstracts
+@import "abstracts/fonts";
+@import "abstracts/varaibles";
+@import "abstracts/placeholders";
+@import "abstracts/mixins";
+
+//base
+@import "base/nullstyle";
+@import "base/base";
+@import "base/burger";
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+
+//components
+@import "components/start-screen";
+@import "components/navigation";
+@import "components/about";
+@import "components/conditions";
+@import "components/vacancy";
+@import "components/vacancy_list";
+@import "components/part-time";

@@ -1,0 +1,82 @@
+.conditions {
+  margin: 0 0 25px;
+  padding: 15px 0;
+
+  @include media-mobile {
+    margin: 0 0 10px;
+  }
+
+  &__body {
+    @include flex($direction: column);
+    gap: 25px;
+
+    @include media-mobile {
+      gap: 10px;
+    }
+  }
+
+  &__bottom {
+    margin: 0 0 5px;
+    padding: 5% 10%;
+    @include flex($direction: column);
+    border-radius: 38%;
+    text-align: center;
+    box-shadow: 3px 3px 7px 3px $color-black;
+    background-color: $color-main;
+    @include font($size: 2.8rem);
+  }
+
+  &__text {
+    padding: 10px;
+    border: 10px outset $color-dark-light;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-red;
+    @extend %transition;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__addition {
+    margin: 0 0 15px;
+    @include font($size: 2.3rem);
+  }
+
+  &__phrase {
+    @extend %font-additional;
+  }
+}
+
+.main-list {
+  @include flex($direction: column, $align: flex-start);
+  gap: 10px;
+  margin: 0 0 15px;
+
+  &__item {
+    position: relative;
+    padding: 0 0 0 30px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15%;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: url("../assets/images/icons/arrow.svg") 100% / cover no-repeat;
+
+      @include media-desktop-small {
+        width: 20px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.phrase {
+  @include flex($direction: column);
+  gap: 5px;
+}

@@ -1,0 +1,77 @@
+.cover {
+  display: none;
+}
+
+.burger {
+  display: none;
+}
+
+@include media-tablet {
+  .burger {
+    position: sticky;
+    @include flex($direction: column);
+    z-index: 100;
+    transition: all 0.3s ease;
+
+    &__line {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin: 0 0 10px;
+      background-color: $color-black;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .cover {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 50;
+    @include flex($justify: flex-end);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    transition: all 0.3s ease;
+
+    .nav__list {
+      @include flex($direction: column, $justify: center);
+      flex: 0 0 320px;
+      height: 100%;
+      padding: 0 0 25px;
+      background-color: $color-add-light;
+    }
+
+    .nav__item {
+      width: 100%;
+      margin: 0 0 40px;
+      text-align: center;
+    }
+
+    .nav__link {
+      @include font($size: 3.2rem, $height: 160%);
+
+      &::after {
+        top: 40px;
+      }
+    }
+  }
+
+  .open-cover {
+    right: 0;
+  }
+
+  .active-burger {
+    .burger {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+

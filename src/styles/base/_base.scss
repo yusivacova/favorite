@@ -1,0 +1,61 @@
+html {
+  @extend %font-main;
+  font-size: 10px;
+
+  @include media-desktop-small {
+    font-size: 8px;
+  }
+
+  @include media-mobile {
+    font-size: 6px;
+  }
+
+  @include media-mobile-small {
+    font-size: 5px;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "start-screen"
+    "content"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  font-size: 1.6rem;
+}
+
+.container {
+  overflow: hidden;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include font($size: 2.8rem);
+}
+
+.nav-link {
+  color: $color-black;
+  @include font($size: 2rem);
+  @extend %transition;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+
+h1 {
+  @include font($size: 2.2rem);
+  text-transform: uppercase;
+  color: $color-grey;
+}
+
+h2 {
+  text-transform: uppercase;
+  @include font($size: 3.5rem, $weight: 600);
+}
+
+h3 {
+  @include font($size: 3rem, $weight: 600);
+}

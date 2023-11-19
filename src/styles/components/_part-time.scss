@@ -1,0 +1,62 @@
+.part-time {
+  padding: 30px 0;
+
+  @include media-mobile {
+    padding: 15px 0;
+  }
+
+  &__body {
+    @include flex($direction: column, $align: stretch);
+    gap: 15px;
+    text-align: center;
+  }
+
+  &__content {
+    @include flex($justify: space-evenly);
+    align-self: stretch;
+
+    @include media-mobile {
+      @include flex($justify: space-evenly, $wrap: wrap);
+    }
+  }
+
+  &__image {
+    flex: 0 1 300px;
+    min-height: 335px;
+    background: url("../assets/images/cashier.webp") 100% / cover no-repeat;
+    @extend %transition;
+    border-radius: 15%;
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 3px 3px 7px 3px $color-black;
+    }
+
+    @include media-desktop-small {
+      flex: 0 1 220px;
+      min-height: 270px;
+    }
+
+    @include media-mobile-small {
+      flex: 0 1 155px;
+      min-height: 170px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  &__towns {
+    @include font($size: 3rem, $height: 1.8rem);
+  }
+
+  &__towns-list {
+
+  }
+
+  &__towns-item {
+    padding: 0 0 5px;
+  }
+}
